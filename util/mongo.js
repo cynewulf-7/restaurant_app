@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const MONGO_URL = process.env.MONGO_URL
+const MONGO_URL = "mongodb+srv://Destiny_cyne:Destiny_cyne@cluster0.pkamajb.mongodb.net/pizza?retryWrites=true&w=majority"
 
 if (!MONGO_URL) {
   throw new Error(
@@ -29,7 +29,7 @@ async function dbConnect() {
       bufferCommands: false,
     }
 
-    cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) => {
+    cached.promise = mongoose.connect("mongodb+srv://Destiny_cyne:Destiny_cyne@cluster0.pkamajb.mongodb.net/pizza?retryWrites=true&w=majority", opts).then((mongoose) => {
       return mongoose
     })
   }
